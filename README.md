@@ -11,7 +11,7 @@ Guide on how to clone my config files and setup to continue tracking configs on 
 `git clone --bare https://github.com/ssdean/.cfg.git $HOME/.cfg`
 
 ### Checkout files
-`config checkout`
+`cfg checkout`
 
 ### Don't show untracked files
 `cfg config --local status.showUntrackedFiles no`
