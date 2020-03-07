@@ -14,7 +14,8 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-# My additions
+# Default editor
+export VISUAL="vim"
 
 zstyle ':completion:*' menu select
 
