@@ -11,16 +11,21 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
+bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Default editor
 export VISUAL="vim"
 
+# Tab for arrow navigation in autocomplete menu
 zstyle ':completion:*' menu select
+zstyle ':completion:*:default' list-colors \ 
+       ${(s.:.)LS_COLORS}
 
 autoload -Uz promptinit
 promptinit
+
+# Custom prompt
 prompt='%B[%F{4}%n%f%F{7}@%f%F{1}%M%f %F{2}%~%f]$%b '
 
 # Alias 
