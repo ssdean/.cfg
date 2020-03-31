@@ -3,7 +3,6 @@
 zstyle ':completion:*' completer _complete _ignored
 zstyle :compinstall filename '/home/steven/.zshrc'
 
-
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -23,22 +22,16 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors \ 
        ${(s.:.)LS_COLORS}
 
-
-
-# Git display
+# Git info
 autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-
-zstyle ':vcs_info:git:*' formats '%B%F{white}(%f%F{red}%b%f%F{white})%f '
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%B%F{white}(%f%F{red}%b%f%F{white})%f'
 
 # Prompt
 autoload -Uz promptinit
 promptinit
-PROMPT='%B[%F{blue}%n%f%F{white}@%f%F{red}%M%f %F{green}%~%f]%b '
-PROMPT+=\$vcs_info_msg_0_
-PROMPT+='%B%F{yellow}$%f%b '
+setopt prompt_subst
+PROMPT='%B[%F{blue}%n%f%F{white}@%f%F{red}%M%f %F{green}%~%f]${vcs_info_msg_0_}%F{yellow}$%f%b '
 
 # Alias 
 alias ls='ls --color=auto' 
