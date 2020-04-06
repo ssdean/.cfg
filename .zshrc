@@ -25,13 +25,13 @@ zstyle ':completion:*:default' list-colors \
 # Git info
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%B%F{white}(%f%F{red}%b%f%F{white})%f'
+zstyle ':vcs_info:git:*' formats '%B%F{white}%b%f '
 
 # Prompt
 autoload -Uz promptinit
 promptinit
 setopt prompt_subst
-PROMPT='%B[%F{blue}%n%f%F{white}@%f%F{red}%M%f %F{green}%~%f]${vcs_info_msg_0_}%F{yellow}$%f%b '
+PROMPT='%B%F{38}%n%f%F{white}@%f%F{213}%M%f %F{244}%~%f ${vcs_info_msg_0_}%F{38}$%f%b '
 
 # Alias 
 alias ls='ls --color=auto' 
