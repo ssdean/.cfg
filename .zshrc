@@ -1,23 +1,25 @@
-# The following lines were added by compinstall
+# Colors
+C1=38   # User
+C2=213  # Host
+C3=244  # Dir
 
-zstyle ':completion:*' completer _complete _ignored
-zstyle :compinstall filename '/home/steven/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 bindkey -v
-# End of lines configured by zsh-newuser-install
 
 # Default editor
 export VISUAL="vim"
 
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' completer _complete _ignored
+zstyle :compinstall filename '/home/steven/.zshrc'
+
 # Tab for arrow navigation in autocomplete menu
 zstyle ':completion:*' menu select
+
 # Colour menu output
 zstyle ':completion:*:default' list-colors \ 
        ${(s.:.)LS_COLORS}
@@ -25,13 +27,14 @@ zstyle ':completion:*:default' list-colors \
 # Git info
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%B%F{white}%b%f '
+zstyle ':vcs_info:git:*' formats '%F{$C3}%s [%F{$C1}Branch%f:%F{$C2}%b%f%F{$C3}]%f'
 
 # Prompt
 autoload -Uz promptinit
 promptinit
 setopt prompt_subst
-PROMPT='%B%F{38}%n%f%F{white}@%f%F{213}%M%f %F{244}%~%f ${vcs_info_msg_0_}%F{38}$%f%b '
+PROMPT='%B%F{$C1}%n%f%F{white}@%f%F{$C2}%M%f %F{$C3}%~%f %F{$C1}$%f%b '
+RPROMPT='${vcs_info_msg_0_}'
 
 # Alias 
 alias ls='ls --color=auto' 
