@@ -5,6 +5,7 @@ SAVEHIST=1000
 bindkey -v
 
 # Default editor
+export EDITOR="vim"
 export VISUAL="vim"
 
 # Completion
