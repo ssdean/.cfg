@@ -1,3 +1,6 @@
+setopt prompt_subst
+setopt histignorealldups
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -19,6 +22,17 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors \ 
        ${(s.:.)LS_COLORS}
 
+## Plugins section: Enable fish style features
+# Use syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Use history substring search
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+# Use autosuggestion
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+
 # Git info
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -27,7 +41,6 @@ zstyle ':vcs_info:git:*' formats '%F{244}%s [%F{38}Branch%f:%F{213}%b%f%F{244}]%
 # Prompt
 autoload -Uz promptinit
 promptinit
-setopt prompt_subst
 PROMPT='%B%F{38}%n%f%F{256}@%f%F{213}%M%f %F{244}%~%f %F{38}$%f%b '
 RPROMPT='${vcs_info_msg_0_}'
 
