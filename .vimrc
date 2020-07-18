@@ -14,5 +14,7 @@ set autoindent
 set smartindent
 
 " Plugins 
-set runtimepath^=~/.vim/plugins/vim-gitgutter
-source ~/.vim/plugins/vim-gitgutter/plugin/gitgutter.vim
+
+set rtp^=~/.vim/pack/git-plugins/start/**/*.vim
+
+map <C-n> :NERDTreeToggle<CR>  " Map CTRL n to Nerdtree
