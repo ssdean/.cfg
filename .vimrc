@@ -1,15 +1,18 @@
-" Encoding 
-set encoding=utf-8
+" Vim Setting
+set encoding=utf-8          " Set encoding 
+set number relativenumber   " Show line numbers
+set showcmd                 " Show partial commands
+filetype indent plugin on   " File type detection
+syntax on                   " Enable syntax
 
-" Enable syntax
-syntax on
+" Tab Settings
+set tabstop=4     " Tab width
+set expandtab     " Convert tab to spaces
 
-" Display line numbers
-set number
+" Auto Indenting 
+set autoindent
+set smartindent
 
-" Show partial commands
-set showcmd
-
-" turn hybrid line numbers on
-:set number relativenumber
-:set nu rnu
+" Plugins 
+set runtimepath^=~/.vim/plugins/vim-gitgutter
+source ~/.vim/plugins/vim-gitgutter/plugin/gitgutter.vim
