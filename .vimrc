@@ -12,14 +12,19 @@ set expandtab     " Convert tab to spaces
 set autoindent
 set smartindent
 
-" Plugins 
-set rtp^=~/.vim/pack/git-plugins/start/**/*.vim  " Path to plugins
+"""" Plugins 
+set rtp^=~/.vim/pack/git-plugins/start/**/*.vim       " Path to plugins
+set rtp^=~/.vim/pack/git-plugins/start/**/docs/*.txt  " Path to plugin docs
 
 " Nerdtree
-map <C-n> :NERDTreeToggle<CR>                    " Map CTRL n to Nerdtree
+map <C-n> :NERDTreeToggle<CR>                         " Map CTRL n to Nerdtree
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1     " Tabable airline
-let g:airline_theme='powerlineish'               " Airline theme
-let g:airline_powerline_fonts = 1                " Enable powerline fonts
-set noshowmode                                   " Don't show mode (Airline already shows it) 
+let g:airline#extensions#tabline#enabled = 1          " Tabable airline
+let g:airline_theme='powerlineish'                    " Airline theme
+let g:airline_powerline_fonts = 1                     " Enable powerline fonts
+set noshowmode                                        " Don't show mode (Airline already shows it) 
+
+" Ale
+let g:ale_linters = {'rust': ['rustc']}               " Set rust linter to rustc (default is cargo)
+
