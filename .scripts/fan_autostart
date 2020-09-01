@@ -1,0 +1,4 @@
+
+sleep 10
+liquidctl set ring color spectrum-wave
+liquidctl set fan speed 35
