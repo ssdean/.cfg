@@ -8,7 +8,7 @@ Guide on how to clone my config files and setup to continue tracking configs on 
 `echo ".cfg" >> .gitignore`
 
 ### Clone into bare repo
-`git clone --bare --recursive-submodules https://github.com/ssdean/.cfg.git $HOME/.cfg`
+`git clone --bare --recurse-submodules https://github.com/ssdean/.cfg.git $HOME/.cfg`
 
 ### Checkout files
 `cfg checkout`

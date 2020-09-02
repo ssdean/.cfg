@@ -1,0 +1,6 @@
+# To start at boot run sudo crontab -e and add the following:
+# @reboot /home/steven/.scripts/fan_autostart
+
+sleep 5
+liquidctl set ring color spectrum-wave
+liquidctl set fan speed 35
