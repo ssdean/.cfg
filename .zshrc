@@ -37,7 +37,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 # Git info
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%F{244}%s [%F{38}Branch%f:%F{213}%b%f%F{244}]%f'
+zstyle ':vcs_info:git:*' formats '%F{244}%s [%F{38}branch%f:%F{213}%b%f%F{244}]%f'
 
 # Prompt
 autoload -Uz promptinit
