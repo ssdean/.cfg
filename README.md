@@ -10,6 +10,9 @@ Guide on how to clone my config files and setup to continue tracking configs on 
 ### Clone into bare repo
 `git clone --bare --recurse-submodules https://github.com/ssdean/.cfg.git $HOME/.cfg`
 
+### Load submodules
+`cfg submodule update --init`
+
 ### Checkout files
 `cfg checkout`
 
