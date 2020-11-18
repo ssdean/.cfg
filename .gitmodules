@@ -1,18 +1,9 @@
 [submodule ".vim/plugins/vim-gitgutter"]
 	path = .vim/plugins/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule ".vim/pack/git-plugins/start/vim-gitgutter"]
-	path = .vim/pack/git-plugins/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule ".vim/pack/git-plugins/start/nerdtree"]
 	path = .vim/pack/git-plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule ".vim/pack/git-plugins/start/vim-airline"]
-	path = .vim/pack/git-plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/pack/git-plugins/start/vim-airline-themes"]
-	path = .vim/pack/git-plugins/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule ".vim/pack/git-plugins/start/ale"]
 	path = .vim/pack/git-plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
