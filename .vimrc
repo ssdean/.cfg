@@ -1,30 +1,20 @@
 " Vim Setting
-set encoding=utf-8          " Set encoding 
-set number relativenumber   " Show line numbers
-filetype indent plugin on   " File type detection
 syntax on                   " Enable syntax
+filetype indent plugin on   " File type detection
+set encoding=utf-8          " Set encoding 
+set number relativenumber   " Show line numbers (Relative to cursor)
+set wildmenu                " Vim command tab completion
+set tabstop=4               " Tab width
+set expandtab               " Convert tab to spaces
+set autoindent              " Auto indent
+set smartindent             " Use smart indentation (After certain key words and characters)
+set showmatch               " Flash matching bracket when closing brackets 
+colorscheme delek           " Set colorsi. delek, koehler, murphy
 
-" Tab Settings
-set tabstop=4     " Tab width
-set expandtab     " Convert tab to spaces
-
-" Auto Indenting 
-set autoindent
-set smartindent
-
-"""" Plugins 
+" Plugins
 set rtp^=~/.vim/pack/git-plugins/start/**/*.vim       " Path to plugins
 set rtp^=~/.vim/pack/git-plugins/start/**/docs/*.txt  " Path to plugin docs
+packl                                                 " Load all plugins in start dir of rtp (runtimepath)
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>                         " Map CTRL n to Nerdtree
-
-" Airline
-let g:airline#extensions#tabline#enabled = 1          " Tabable airline
-let g:airline_theme='powerlineish'                    " Airline theme
-let g:airline_powerline_fonts = 1                     " Enable powerline fonts
-set noshowmode                                        " Don't show mode (Airline already shows it) 
-
-" Ale
-let g:ale_linters = {'rust': ['rustc']}               " Set rust linter to rustc (default is cargo)
-
