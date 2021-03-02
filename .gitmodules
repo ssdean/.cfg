@@ -19,3 +19,9 @@
 [submodule ".vim/pack/git-plugins/start/vim-gitgutter"]
 	path = .vim/pack/git-plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".themes/Qogir-theme"]
+	path = .themes/Qogir-theme
+	url = https://github.com/vinceliuice/Qogir-theme.git
+[submodule ".themes/Qogir-icon-theme"]
+	path = .themes/Qogir-icon-theme
+	url = https://github.com/vinceliuice/Qogir-icon-theme.git
