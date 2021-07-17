@@ -9,22 +9,23 @@ let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"  " Foreground colour?
 set termguicolors
 
 " Settings
-syntax on                   " Enable syntax
-set autoindent              " Auto bracket indenting
-set encoding=utf-8          " Set encoding 
-set number relativenumber   " Show line numbers (Relative to cursor)
-set wildmenu                " Vim command tab completion
-set tabstop=4               " Tab width
-set expandtab               " Convert tab to spaces
-set showmatch               " Flash matching bracket when closing brackets 
+syntax on                      " Enable syntax
+set autoindent                 " Auto bracket indenting
+set encoding=utf-8             " Set encoding 
+set number relativenumber      " Show line numbers (Relative to cursor)
+set wildmenu                   " Vim command tab completion
+set tabstop=4                  " Tab width
+set expandtab                  " Convert tab to spaces
+set showmatch                  " Flash matching bracket when closing brackets 
 let ayucolor="mirage"
-colorscheme ayu          " Set colors
+colorscheme ayu                " Set colors
 
 " Plugins
-packl                       " Load all plugins in start dir of rtp (runtimepath)
+packl          " Load all plugins in start dir of rtp (runtimepath)
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>    " Map CTRL n to Nerdtree
 
-
+" Ensure visual highlighting is active (Must come after theme settings)
+highlight Visual cterm=reverse 
 
