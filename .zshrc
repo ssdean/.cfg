@@ -12,17 +12,15 @@ export EDITOR="vim"
 export VISUAL="vim"
 
 # Completion
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle :compinstall filename '/home/steven/.zshrc'
+
 autoload -Uz compinit
 compinit
-zstyle ':completion:*' completer _complete _ignored
-zstyle :compinstall filename '/home/steven/.zshrc'
-# Tab for arrow navigation in autocomplete menu
-zstyle ':completion:*' menu select
-# Colour menu output
-zstyle ':completion:*:default' list-colors \ 
-       ${(s.:.)LS_COLORS}
 
-## Plugins section: Enable fish style features
 # Use syntax highlighting
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -49,7 +47,3 @@ RPROMPT='${vcs_info_msg_0_}'
 alias ls='ls --color=auto' 
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias i3cfg='/usr/bin/git --git-dir=$HOME/.config/i3/.i3cfg/ --work-tree=$HOME'
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
