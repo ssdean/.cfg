@@ -45,5 +45,6 @@ RPROMPT='${vcs_info_msg_0_}'
 
 # Alias 
 alias ls='ls --color=auto' 
+alias ip='ip -c'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias i3cfg='/usr/bin/git --git-dir=$HOME/.config/i3/.i3cfg/ --work-tree=$HOME'
