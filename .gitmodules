@@ -22,3 +22,6 @@
 [submodule ".vim/pack/themes/start/ayu-vim"]
 	path = .vim/pack/themes/start/ayu-vim
 	url = https://github.com/ayu-theme/ayu-vim.git
+[submodule ".vim/pack/git-plugins/start/LanguageClient-neovim"]
+	path = .vim/pack/git-plugins/start/LanguageClient-neovim
+	url = /home/steven/.vim/pack/git-plugins/start/LanguageClient-neovim
