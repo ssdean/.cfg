@@ -23,9 +23,7 @@ if [ -d ~/.bashrc.d ]; then
 		fi
 	done
 fi
-
 unset rc
-. "$HOME/.cargo/env"
 
 PS1="\e[1;36m\u\e[m\e[1;97m@\e[m\e[1;95m\h\e[m \e[2;97m\w\e[m \e[1;93m\$\e[m "
 
