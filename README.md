@@ -19,3 +19,4 @@ Guide on how to clone my config files and setup to continue tracking configs on 
 ### Don't show untracked files
 `cfg config --local status.showUntrackedFiles no`
 
+
