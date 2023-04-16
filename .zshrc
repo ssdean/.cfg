@@ -22,15 +22,13 @@ autoload -Uz compinit
 compinit
 
 # Use syntax highlighting
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Use history substring search
 source $HOME/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # Use autosuggestion
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=100
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-
 
 # Git info
 autoload -Uz vcs_info

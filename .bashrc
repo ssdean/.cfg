@@ -38,3 +38,4 @@ alias ip='ip -c'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias i3cfg='/usr/bin/git --git-dir=$HOME/.config/i3/.i3cfg/ --work-tree=$HOME/.config/i3/'
 
+. "$HOME/.cargo/env"
