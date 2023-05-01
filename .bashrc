@@ -23,6 +23,7 @@ if [ -d ~/.bashrc.d ]; then
 		fi
 	done
 fi
+
 unset rc
 
 PS1="\e[1;36m\u\e[m\e[1;97m@\e[m\e[1;95m\h\e[m \e[2;97m\w\e[m \e[1;93m\$\e[m "
@@ -38,4 +39,6 @@ alias ip='ip -c'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias i3cfg='/usr/bin/git --git-dir=$HOME/.config/i3/.i3cfg/ --work-tree=$HOME/.config/i3/'
 
-. "$HOME/.cargo/env"
+if [ -e $HOME/.cargo/env ]; then
+    . "$HOME/.cargo/env"
+fi
